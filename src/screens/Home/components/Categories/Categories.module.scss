@@ -1,0 +1,53 @@
+@use "../../../../assets/styles/mixins"as mixin;
+
+.category {
+    padding-top: 100px;
+
+
+    @include mixin.moblie {
+        padding-top: 50px;
+    }
+
+
+    &-content {
+        padding: 30px 20px;
+
+        @include mixin.moblie {
+            padding: 20px 0;
+        }
+
+        box-shadow: 0px 3px 10px rgba($color: #000000, $alpha: 0.1);
+
+    }
+
+    &-heading {
+        text-align: center;
+        margin-bottom: 30px;
+
+        p {
+            margin-bottom: 0;
+            color: #FBCB0A;
+        }
+
+        h1 {
+            line-height: 3.8rem;
+            font-weight: 600;
+
+            @include mixin.moblie {
+                line-height: 2.2rem;
+            }
+        }
+    }
+
+    &-cards__item {
+        text-align: center;
+        position: relative;
+
+        p {
+            margin-top: 1.225rem;
+            font-size: 1.325rem;
+            font-weight: 600;
+        }
+    }
+
+}

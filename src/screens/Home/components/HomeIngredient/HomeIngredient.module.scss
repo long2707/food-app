@@ -1,0 +1,70 @@
+@use "../../../../assets/styles/mixins"as mixin;
+
+.ingredient-area {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    position: relative;
+    background-image: url("../../../../assets/images/burger-banner.jpg");
+    overflow: hidden;
+
+    @include mixin.moblie {
+        background-image: url("");
+    }
+}
+
+.card-item {
+    position: relative;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 8px 0 rgba($color: #000000, $alpha: 9%);
+    padding: 40px 30px 30px;
+    max-width: 380px;
+    transform: translateY(0px);
+    transition: all .3s linear;
+    margin-bottom: 60px;
+
+    @include mixin.tablet {
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+
+    @include mixin.moblie {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    &:hover {
+        background-color: #FFD655;
+        transform: translateY(-5px);
+
+        .card-item-content {
+            color: #fff;
+        }
+    }
+
+    &-number {
+        position: absolute;
+        top: -32px;
+
+        span {
+            background-color: #fff;
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50px;
+            box-shadow: 0px 2px 28px rgba($color: #000000, $alpha: 20%);
+            font-size: 1.525rem;
+            font-weight: 400;
+
+        }
+    }
+}

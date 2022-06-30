@@ -1,0 +1,141 @@
+@use "../../assets/styles/mixins"as mixin;
+
+.header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding-top: 10px;
+    z-index: 999;
+    padding-bottom: 20px;
+
+
+    &.is-sticky {
+        background-color: rgb(0 0 0 / 0.65);
+        box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+            0 8px 10px -6px rgb(0 0 0 / 0.1);
+    }
+
+    .header-logo {
+        margin-right: 20px;
+
+        @include mixin.moblie {
+            margin-right: 0;
+
+            img {
+                height: 2.1rem;
+            }
+        }
+
+        img {
+            height: 2.6rem;
+        }
+    }
+
+    .header-content {
+        display: flex;
+        align-items: flex-end;
+
+        @include mixin.moblie {
+            justify-content: space-between;
+        }
+
+        .header-mennu-toggle {
+            display: none;
+
+            @include mixin.moblie {
+                display: block;
+                cursor: pointer;
+                font-size: 2rem;
+                transform: translateY(9px);
+                line-height: 1;
+                color: #fff;
+            }
+        }
+
+        .menu__left,
+        .menu__right {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+
+        .menu__left {
+            @include mixin.moblie {
+                display: none;
+            }
+
+            div~div {
+                margin-left: 20px;
+            }
+
+            .item-link {
+                font-family: "Poppins";
+                color: #fff;
+
+                &.is-active {
+                    color: #dbae3d;
+                }
+
+                &:hover {
+                    color: #dbae3d;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .menu__right {
+            margin-left: auto;
+            color: #fff;
+            transform: translateY(9px);
+
+            @include mixin.moblie {
+                margin-left: unset;
+                transform: translate(-11px, 9px);
+            }
+
+            .header-cart {
+                font-size: 1.85rem;
+                margin-right: 30px;
+
+                @include mixin.moblie {
+                    font-size: 1.65rem;
+                    margin-right: 0px;
+                }
+
+                .total {
+                    position: absolute;
+                    font-size: 1rem;
+                    background-color: #eab224;
+                    padding: 0px 10px;
+                    border-radius: 40px;
+                    left: 17px;
+
+                    @include mixin.moblie {
+                        font-size: 0.85rem;
+                        padding: 0 5px;
+                    }
+
+                }
+            }
+
+            .sing-in {
+                display: flex;
+                align-items: center;
+                color: #fff;
+
+                @include mixin.moblie {
+                    display: none;
+                }
+
+                i {
+                    font-size: 2.3rem;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+
+}

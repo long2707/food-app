@@ -1,0 +1,50 @@
+@use "../../../../assets/styles/mixins"as mixin;
+
+.welcome-area {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+    }
+
+    .welcome-content {
+        span {
+            font-size: 1.6rem;
+            color: #FBB403;
+        }
+
+        h1 {
+            font-size: 3.235rem;
+            font-weight: 600;
+            line-height: 3.825rem;
+
+            @include mixin.moblie {
+                font-size: 2.225rem;
+                line-height: 2.725rem;
+            }
+        }
+
+        p {
+            color: #737373;
+            line-height: 1.725rem;
+        }
+
+        button {
+            background-color: #FBB403;
+            color: #fff;
+            font-weight: 500;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 30px;
+            transition: all .3s linear;
+
+            &:hover {
+                background-color: #000;
+            }
+
+        }
+    }
+}

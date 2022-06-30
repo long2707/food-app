@@ -1,0 +1,144 @@
+.product-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-area {
+    padding: 50px 0;
+
+    .product-heading {
+        text-align: center;
+        margin-bottom: 50px;
+
+        span {
+            font-size: 1.8rem;
+            font-family: "Pangolin", cursive;
+            color: #fbb403;
+        }
+
+        h2 {
+            font-size: 2.3rem;
+            line-height: 3.6rem;
+            font-weight: 700;
+        }
+    }
+}
+
+//card
+
+.card {
+    text-align: center;
+    border-radius: 5px;
+    // transform: translateY(0px);
+    transition: all .5s ease-in-out;
+    padding-bottom: 30px;
+
+    .image {
+        position: relative;
+
+        padding: 10px 35px 35px 35px;
+
+        &::before {
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 100%;
+            background-color: #fef0cd;
+            left: 0;
+            right: 0;
+            top: 0;
+            z-index: -1;
+            border-radius: 0 0 50% 50%;
+            transition: all .5s ease-in-out;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &-btn {
+        position: relative;
+        top: 40px;
+        display: inline-block;
+        padding: 10px 15px;
+        border: none;
+        background-color: #fbb403;
+        font-weight: 600;
+
+        border-radius: 30px;
+        padding: 6px 10px;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "";
+            inset: 0;
+            width: 0%;
+            height: 100%;
+            border-radius: 50px;
+            background-color: #fff;
+            transition: all .5s ease-in-out;
+
+        }
+
+        a {
+            position: relative;
+            font-weight: 600;
+            font-size: 0.875rem;
+            color: #fff;
+            text-transform: uppercase;
+            transition: all .5s ease-in-out;
+            z-index: 1;
+        }
+    }
+
+    .content {
+        margin-top: 30px;
+        padding: 0 10px;
+
+        h3 {
+            font-size: 1.425rem;
+            font-weight: 800;
+        }
+
+        p {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: rgba($color: #000000, $alpha: 0.4);
+        }
+
+        span {
+            font-size: 18px;
+            font-weight: bold;
+            color: #fbb403;
+        }
+    }
+
+    &:hover {
+        background-color: #fef0cd;
+        transform: translateY(-5px);
+
+        .image {
+            &::before {
+                background-color: #f3c248;
+            }
+        }
+
+        .card-btn {
+
+
+            &::before {
+
+                width: 100%;
+
+            }
+
+            a {
+                color: #fbb403;
+            }
+        }
+    }
+
+
+}
