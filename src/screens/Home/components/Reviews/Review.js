@@ -2,11 +2,11 @@ import React from "react";
 
 import classNames from "classnames/bind";
 import { ShapeIcon } from "components";
-import shape1 from "../../../../assets/images/1.png";
-import shape3 from "../../../../assets/images/3.png";
-import shape5 from "../../../../assets/images/5.png";
-import shape6 from "../../../../assets/images/6.png";
-import shape2 from "../../../../assets/images/2.png";
+import shape1 from "assets/images/1.png";
+import shape3 from "assets/images/3.png";
+import shape5 from "assets/images/5.png";
+import shape6 from "assets/images/6.png";
+import shape2 from "assets/images/2.png";
 import classes from "./Review.module.scss";
 
 const cx = classNames.bind(classes);
@@ -57,7 +57,7 @@ function Review() {
                     <div className={cx("content")}>
                         <h4>Bill Gates</h4>
                         <p>CEO of Microsoft</p>
-                        <p>he veo veonfoe vref0e re v3f 3nf3 f3n3 30f30fn f30fn3fn 30fn3 f03fn f30fn 03n3nf</p>
+                        <p>I had a very good lunch here. This is my favorite restaurant.</p>
                     </div>
                 </div>
             </div>

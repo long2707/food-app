@@ -5,7 +5,7 @@ import React from "react";
 function Star({ rate }) {
     const StarIcon = [];
     for (let i = 1; i <= rate; i++) {
-        StarIcon.push(<i className="bx bxs-star" style={{ color: "#EAB224" }} />);
+        StarIcon.push(<i key={i} className="bx bxs-star" style={{ color: "#EAB224" }} />);
     }
     return (
         <>

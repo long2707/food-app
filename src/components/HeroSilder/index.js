@@ -3,8 +3,8 @@
 /* eslint-disable react/function-component-definition */
 import React from "react";
 import classNames from "classnames/bind";
+import img2 from "assets/images/banner_v2.jpg";
 import clasess from "./Slider.module.scss";
-import img2 from "../../assets/images/banner_v2.jpg";
 
 const cx = classNames.bind(clasess);
 

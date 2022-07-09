@@ -8,9 +8,9 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 import { ShapeIcon } from "components";
-import img from "../../../../assets/images/hamburguer.png";
-import shape1 from "../../../../assets/images/4.png";
-import shape2 from "../../../../assets/images/2.png";
+import img from "assets/images/hamburguer.png";
+import shape1 from "assets/images/4.png";
+import shape2 from "assets/images/2.png";
 import clasess from "./Welcome.module.scss";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -28,47 +28,47 @@ function WelcomeHome() {
 
     //  animation
     React.useEffect(() => {
-        gsap.from(imgRef.current, {
-            translateY: 40,
-            opacity: 0,
+        gsap.fromTo(imgRef.current, { translateY: 40, opacity: 0 }, {
+            translateY: 0,
+            opacity: 1,
             duration: 0.8,
             delay: 0.5,
             scrollTrigger: {
                 trigger: imgRef.current
             }
         });
-        gsap.from(headingRef.current, {
-            translateX: -100,
-            opacity: 0,
+        gsap.fromTo(headingRef.current, { translateX: -50, opacity: 0 }, {
+            translateX: 0,
+            opacity: 1,
             duration: 0.8,
             delay: 1,
             scrollTrigger: {
                 trigger: headingRef.current
             }
         });
-        gsap.from(titleRef.current, {
-            translateX: -50,
-            opacity: 0,
+        gsap.fromTo(titleRef.current, { translateX: -50, opacity: 0 }, {
+            translateX: 0,
+            opacity: 1,
             duration: 0.8,
-            delay: 1.4,
+            delay: 1.2,
             scrollTrigger: {
                 trigger: titleRef.current
             }
         });
-        gsap.from(contentRef.current, {
-            translateX: -50,
-            opacity: 0,
+        gsap.fromTo(contentRef.current, { translateX: -50, opacity: 0 }, {
+            translateX: 0,
+            opacity: 1,
             duration: 0.8,
-            delay: 1.8,
+            delay: 1.4,
             scrollTrigger: {
                 trigger: contentRef.current
             }
         });
-        gsap.from(btnRef.current, {
-            translateX: -50,
-            opacity: 0,
+        gsap.fromTo(btnRef.current, { translateX: -50, opacity: 0 }, {
+            translateX: 0,
+            opacity: 1,
             duration: 0.8,
-            delay: 2.3,
+            delay: 1.6,
             scrollTrigger: {
                 trigger: btnRef.current
             }

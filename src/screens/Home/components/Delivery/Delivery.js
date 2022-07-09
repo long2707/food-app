@@ -6,8 +6,8 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 import classNames from "classnames/bind";
 
-import iconDelivery from "../../../../assets/icons/delivey.svg";
-import imgDelivery from "../../../../assets/images/delivery-service.png";
+import iconDelivery from "assets/icons/delivey.svg";
+import imgDelivery from "assets/images/delivery-service.png";
 
 import classes from "./Delivery.module.scss";
 
