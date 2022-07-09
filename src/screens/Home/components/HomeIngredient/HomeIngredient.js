@@ -6,8 +6,6 @@ import classNames from "classnames/bind";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-// import imgbrand from "../../../../assets/images/burger-banner.jpg";
-
 import classes from "./HomeIngredient.module.scss";
 
 gsap.registerPlugin(ScrollTrigger);

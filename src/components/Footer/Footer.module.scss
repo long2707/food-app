@@ -11,18 +11,26 @@
 
         h2 {
             margin-bottom: 20px;
+
+            @include mixin.moblie {
+                font-size: 0.925rem;
+            }
         }
 
         p {
             color: #4b4b4b;
             line-height: 1.8;
+
+            @include mixin.moblie {
+                font-size: 0.825rem;
+            }
         }
 
         img {
             width: 50%;
 
-            @include mixin.moblie {
-                width: 60%;
+            @include mixin.tablet {
+                width: 100%;
             }
         }
 
@@ -36,6 +44,11 @@
                 color: #000;
                 border-radius: 30px;
                 transition: all .5s;
+
+                @include mixin.moblie {
+                    padding: 6px 10px;
+                    font-size: 0.725rem;
+                }
 
                 &:hover {
                     background-color: #000;

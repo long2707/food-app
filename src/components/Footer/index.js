@@ -3,7 +3,7 @@
 import React from "react";
 import classNames from "classnames/bind";
 
-import img from "../../assets/images/img__ft.jpg";
+import img from "assets/images/img__ft.jpg";
 import classes from "./Footer.module.scss";
 
 const cx = classNames.bind(classes);
@@ -44,7 +44,7 @@ function Footer() {
             >
                 <div className={cx("book-table")}>
                     <div className={cx("row align-items-center")}>
-                        <div className={cx("col-lg-6 col-md-6")}>
+                        <div className={cx("col-lg-6 col-md-6 col-sm-6")}>
                             <div className="book-table__content">
                                 <h2 style={{ fontWeight: "600" }}>
                                     Book A Table Now!
@@ -59,7 +59,7 @@ function Footer() {
                                 </div>
                             </div>
                         </div>
-                        <div className={cx("col-lg-6 col-md-6 text-lg-end text-md-end mt-sm-5 mt-md-0 mt-5 ")}>
+                        <div className={cx("col-lg-6 col-md-6 col-sm-6 text-lg-end text-md-end mt-sm-5 mt-md-0 mt-5 ")}>
                             <img src={img} alt="" />
                         </div>
                     </div>

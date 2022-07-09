@@ -32,6 +32,10 @@ const CardCategory = [
 ];
 
 function Home() {
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <Layout>
             {/* start slider */}

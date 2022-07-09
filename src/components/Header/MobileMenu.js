@@ -11,18 +11,34 @@ import clasess from "./MobileMenu.module.scss";
 const cx = classNames.bind(clasess);
 
 function MobileMenu(props) {
-    const { menu, isActive, onClose } = props;
+    const {
+        menu, isActive, onClose, logOut,
+        avatarURL, name, userDetail
+    } = props;
     return (
 
         <div className={cx("modal-ovelay", { "is-active": isActive })}>
             <div className={cx("backdrop")} onClick={onClose} />
             <div className={cx("menu-content", { "is-active": !!isActive })}>
-                <Link to="/" className={cx("sing-in")}>
-                    <i className="bx bxs-user-circle" />
-                    <div>
-                        Sing In
-                    </div>
-                </Link>
+                {
+                    userDetail
+                        ? (
+                            <div className={cx("sing-in")}>
+                                <img src={avatarURL} alt="" />
+                                <div>
+                                    {name}
+                                </div>
+                            </div>
+                        )
+                        : (
+                            <Link to="/login" className={cx("sing-in")}>
+                                <i className="bx bxs-user-circle" />
+                                <div>
+                                    Sing In
+                                </div>
+                            </Link>
+                        )
+                }
                 <hr />
                 <div className={cx("menu-list")}>
                     {
@@ -34,9 +50,13 @@ function MobileMenu(props) {
                     }
                 </div>
                 <hr />
-                <div className={cx("log-out")}>
-                    Log Out
-                </div>
+                {
+                    userDetail ? (
+                        <div className={cx("log-out")} onClick={logOut}>
+                            Log Out
+                        </div>
+                    ) : null
+                }
             </div>
         </div>
     );
