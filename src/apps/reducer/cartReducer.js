@@ -21,7 +21,6 @@ const cartReducer = (state = initialState, action) => {
             const checkCart = carts.some((item) => item.id === id);
             if (checkCart) {
                 carts.filter((item) => item.id !== id);
-                console.log(carts);
             }
 
             return { items: [...carts] };
