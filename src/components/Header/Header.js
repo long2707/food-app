@@ -68,7 +68,7 @@ function Header() {
         } else {
             setShowCart((prev) => !prev);
         }
-    }, [showCart, userDetail]);
+    }, [navigate, userDetail]);
 
     // logout
     const handleLogOut = () => {
