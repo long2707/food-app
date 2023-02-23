@@ -178,7 +178,7 @@ function Header() {
                                             <Link to="/login" className={cx("sing-in")}>
                                                 <i className="bx bxs-user-circle" />
                                                 <div>
-                                                    Sing In
+                                                    Sign In
                                                 </div>
                                             </Link>
                                         )

@@ -161,17 +161,10 @@
                 margin-top: 30px;
                 display: flex;
                 align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 10px;
 
-                @include mixin.moblie {
-                    flex-direction: column;
-
-                    button {
-                        &:first-child {
-                            margin-right: 0px;
-                            margin-bottom: 15px;
-                        }
-                    }
-                }
 
                 button {
                     padding: 10px 12px;
@@ -190,10 +183,6 @@
                         width: 24px;
                         height: 24px;
                         margin-right: 5px;
-                    }
-
-                    &:first-child {
-                        margin-right: 10px;
                     }
                 }
             }
