@@ -1,6 +1,6 @@
 <h2 align="center">FOOD-APP🍔</h2>
 
-#### 👉 Demo: [Food-App.wep.app](https://food-app-de12b.web.app/)
+#### 👉 Demo: [Food-App.wep.app](https://food-app-f.netlify.app/)
 
 #### 🎮 Technologies
 <li> Reactjs</li>
